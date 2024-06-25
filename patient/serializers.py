@@ -7,7 +7,7 @@ class PatientSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(many = False)
     class Meta:
         model = Patient
-        fields = '__all__'
+        fields = ['user', 'phone', 'image']
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
