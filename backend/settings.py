@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-^@6&qvzxknhomzfkk1$a5dgs4o=_y^rzkilj%)4p(lk8tr8aw8
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://elitcare.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://elitcare.onrender.com',"http://localhost:8080 2", "http://*.127.0.0.1", "http://127.0.0.1:8080"]
 
 
 # Application definition
@@ -102,12 +102,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     ),
-    'DEFAULT_RENDERER_CLASSES': (
-        #   'rest_framework.renderers.XMLRenderer',
-        # 'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework.renderers.JSONRenderer',
-    
-    )
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+    ]
 }
 
 
