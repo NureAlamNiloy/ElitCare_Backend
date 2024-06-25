@@ -29,6 +29,7 @@ SECRET_KEY = 'django-insecure-^@6&qvzxknhomzfkk1$a5dgs4o=_y^rzkilj%)4p(lk8tr8aw8
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://elitcare.onrender.com']
 
 
 # Application definition
